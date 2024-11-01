@@ -32,7 +32,6 @@ html
     text-align: center;
     font-size: 2rem;
     margin-top: 1rem;
-    margin-bottom: 2rem;
 }
 
 .title span
@@ -71,13 +70,6 @@ html
 
 /* Compound Interest Calculator */
 
-#interest-calculator
-{
-    background-color: whitesmoke;
-    border: black 0.5rem solid;
-    width: fit-content;
-}
-
 .main-container
 {
     flex: 1;
@@ -85,4 +77,73 @@ html
     justify-content: center;
     align-items: center;
 }
+
+#interest-calculator
+{
+    display: flex;
+    flex-direction: column;
+    background-color: whitesmoke;
+    border: black 0.5rem solid;
+    border-radius: 2rem;
+    width: fit-content;
+    height: 600px;
+    padding: 1rem 4rem 6rem 4rem;
+}
+
+h2
+{
+    font-size: 2rem;
+    text-decoration: underline;
+    margin-bottom: 2rem;
+}
+
+.formula-text
+{
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.input-block
+{
+    align-self: flex-end;
+    padding-right: 7rem;
+    margin-bottom: 0.5rem;
+}
+
+#result
+{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    align-self: center;
+}
+
+input
+{
+    height: 20px;
+    background-color: white;
+}
+
+/* Buttons */
+
+#calculate-btn
+{
+    font-weight: 600;
+    transition: all 300ms ease;
+    padding: 1rem;
+    width: 8rem;
+    border-radius: 2rem;
+    background-color: white;
+    font-size: 1.25rem;
+    align-self: center;
+    margin-top: 1rem;
+}
+
+#calculate-btn:hover
+{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
 

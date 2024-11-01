@@ -18,25 +18,25 @@
     <div class = "main-container">
         <div id = "interest-calculator">
             <h2>Compound Interest Calculator</h2>
-            <p>Formula: A = P(1 + r/n)<sup>nt</sup> + PMT((1 + r/n)<sup>nt</sup> - 1)/(r/n)</p>
+            <p class = "formula-text"><b>Formula: A = P(1 + r/n)<sup>nt</sup> + PMT((1 + r/n)<sup>nt</sup> - 1)/(r/n)</b></p>
             <div class = "input-block">
                 <label for = "starting-balance">Starting Balance (P):</label>
-                <input type = "text" id = "starting-balance" name = "starting-balance"/>
+                <input autocomplete = "off" type = "text" id = "starting-balance" name = "starting-balance" placeholder = "Enter Starting Balance"/>
             </div>
 
             <div class = "input-block">
                 <label for = "contribution">Contribution (PMT):</label>
-                <input type = "text" id = "contribution" name = "contribution"/>
+                <input autocomplete = "off" type = "text" id = "contribution" name = "contribution" placeholder = "Enter Contribution"/>
             </div>
 
             <div class = "input-block">
                 <label for = "years">Years (t):</label>
-                <input type = "text" id = "years" name = "years"/>
+                <input autocomplete = "off" type = "text" id = "years" name = "years" placeholder = "Enter Years"/>
             </div>
 
             <div class = "input-block">
                 <label for = "interest-rate">Interest Rate % (r):</label>
-                <input type = "text" id = "interest-rate" name = "interest-rate"/>
+                <input autocomplete = "off" type = "text" id = "interest-rate" name = "interest-rate" placeholder = "Enter Interest Rate"/>
             </div>
 
             <div class = "input-block">
@@ -49,7 +49,7 @@
             </div>
 
             <button id = "calculate-btn">Calculate</button>
-            <div id = "result">0</div>
+            <div id = "result">Total Savings: $0</div>
 
             <div>
                 <canvas id="myChart"></canvas>
