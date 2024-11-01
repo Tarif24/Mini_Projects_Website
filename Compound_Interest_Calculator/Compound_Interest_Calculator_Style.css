@@ -66,3 +66,12 @@ html
     height: 80px;
 }
 
+/* Compound Interest Calculator */
+
+#interest-calculator
+{
+    background-color: whitesmoke;
+    border: black 0.5rem solid;
+    width: fit-content;
+}
+
