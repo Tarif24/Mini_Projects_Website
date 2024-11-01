@@ -12,6 +12,9 @@
 
 body
 {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -73,5 +76,13 @@ html
     background-color: whitesmoke;
     border: black 0.5rem solid;
     width: fit-content;
+}
+
+.main-container
+{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
