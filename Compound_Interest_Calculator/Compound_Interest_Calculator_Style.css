@@ -94,7 +94,7 @@ h2
 {
     font-size: 2rem;
     text-decoration: underline;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 .formula-text
@@ -122,6 +122,13 @@ input
 {
     height: 20px;
     background-color: white;
+}
+
+/* Savings Graph */
+
+#my-chart
+{
+    border: black 0.2rem solid;
 }
 
 /* Buttons */

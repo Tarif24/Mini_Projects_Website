@@ -55,7 +55,7 @@ html
 {
     display: flex;
     flex-direction: column;
-    border: rgb(0, 0, 0) 0.1rem solid;
+    border: rgb(0, 0, 0) 0.2rem solid;
     width: fit-content;
     background-color: white;
     text-align: center;

@@ -1,9 +1,39 @@
 const btn = document.getElementById("calculate-btn");
-const ctx = document.getElementById('myChart');
+const ctx = document.getElementById("my-chart");
 
 let currChart;
 
 btn.addEventListener("click", Calculate);
+
+function Initilize()
+{
+    currChart = new Chart(ctx, 
+        {
+            type: 'bar',
+            data: 
+            {
+            labels: ["Without Interest", "With Interest"],
+            datasets: 
+                [
+                    {
+                        label: 'Savings',
+                        data: [],
+                        borderWidth: 1
+                    }   
+                ]
+            },
+            options:
+            {
+                scales: 
+                {
+                    y: 
+                    {
+                        beginAtZero: true
+                    }
+                }
+            }
+      });
+}
 
 function Calculate()
 {
