@@ -23,6 +23,7 @@ function AddToDo()
             completed: false
         }
         allTodos.push(todoObject);
+        SaveToDos();
         UpdateToDoList();
         todoInput.value = "";
     }
