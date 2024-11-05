@@ -94,13 +94,19 @@ h2
 .wrapper
 {
     margin-top: 5rem;
+    margin-bottom: 5rem;
     width: 700px;
-    max-width: 100%;
+    max-width: 70%;
     display: flex;
     flex-direction: column;
     gap: 10px;
     align-items: center;
     align-self: center;
+    border: black 0.5rem solid;
+    border-radius: 2rem;
+    padding: 4rem;
+    height: 400px;
+    min-height: fit-content;
 }
 
 #todo-input
@@ -225,6 +231,12 @@ input[type = "checkbox"]
     display: none;
 }
 
+#spacer
+{
+    color: white;
+    height: 5rem;
+}
+
 @media(max-width: 500px)
 {
     html
@@ -245,5 +257,13 @@ input[type = "checkbox"]
     {
         margin-top: 50px;
         font-size: 15vw;
+    }
+}
+
+@media(max-width: 900px)
+{
+    .wrapper
+    {
+        width: 70vw;
     }
 }
