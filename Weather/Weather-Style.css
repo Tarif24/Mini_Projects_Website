@@ -89,6 +89,7 @@ html
     align-items: center;
     flex-direction: column;
     padding: 3rem;
+    background: rgb(175, 175, 175);
 }
 
 /* Input */
@@ -109,6 +110,7 @@ html
     padding: 0 1rem;
     font-size: 1.25rem;
     text-align: center;
+    background: rgb(216, 216, 216);
 }
 
 #search-btn
@@ -124,6 +126,7 @@ html
     align-items: center;
     width: 6rem;
     transition: all 200ms ease-in-out;
+    background: rgb(216, 216, 216);
 }
 
 #search-btn:hover
@@ -162,19 +165,45 @@ h3
 
 /* Weather Info */
 
-#weather-info-secondary
+#hourly-weather-info
 {
     display: flex;
     width: 100%;
-    justify-content: space-around;
+    gap: 2rem;
+    overflow-x: scroll;
 }
 
-.secondary-info
+.hour-info
 {
+    display: flex;
+    flex-direction: column;
     text-align: center;
+    gap: 0.7rem;
 }
 
 h4
 {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
 }
+
+#hourly-weather-info::-webkit-scrollbar {
+    width: 2em;
+    height: 1em;
+  }
+  
+  #hourly-weather-info::-webkit-scrollbar-track {
+    background: hsl(0, 0%, 60%);
+    border-radius: 100vw;
+    margin-block: 0.5em;
+  }
+  
+  #hourly-weather-info::-webkit-scrollbar-thumb {
+    background: hsl(0, 0%, 40%);
+    border: 0.25em solid hsl(0, 0%, 60%);
+    border-radius: 100vw;
+    transition: all 200ms ease-in-out;
+  }
+  
+  #hourly-weather-info::-webkit-scrollbar-thumb:hover {
+    background: hsl(0, 0%, 25%);
+  }
