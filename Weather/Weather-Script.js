@@ -38,7 +38,7 @@ function GetLocationWeather(locationData)
 
     fetch(queryRequest)
     .then((response) => response.json())
-    .then((data) => {DisplayWeatherInfo(data[0])});
+    .then((data) => {DisplayWeatherInfo(data[0], locationData.LocalizedName, locationData.Country.LocalizedName)});
 }
 
 function GetHourlyLocationWeather(locationData)
@@ -50,15 +50,14 @@ function GetHourlyLocationWeather(locationData)
     .then((data) => {DisplayHourlyWeather(data)});
 }
 
-function DisplayWeatherInfo(locationWeatherData)
+function DisplayWeatherInfo(locationWeatherData, city, country)
 {
     const tempText = document.getElementById("temp");
     const cityText = document.getElementById("city");
 
     tempText.innerText = `${locationWeatherData.Temperature.Metric.Value}\u00B0${locationWeatherData.Temperature.Metric.Unit}`;
-    tempCityText = document.getElementById("city-input").value;
     document.getElementById("mini-description").innerText = locationWeatherData.WeatherText;
-    cityText.innerText = tempCityText;
+    cityText.innerText = `${city}, ${country}`;
 }
 
 function DisplayHourlyWeather(locationHourlyData)
@@ -70,8 +69,9 @@ function DisplayHourlyWeather(locationHourlyData)
     locationHourlyData.forEach((element, index) => 
     {
         const dateTime = new Date (element.EpochDateTime * 1000);
-        const time = dateTime.getHours();
+        let time = dateTime.getHours();
         let temp = 0;
+        let timePostFix = ""
 
         if (element.Temperature.Unit = "F")
         {
@@ -81,12 +81,27 @@ function DisplayHourlyWeather(locationHourlyData)
         {
             temp = element.Temperature.Value;
         }
+
+        if (time > 12)
+        {            
+            time -= 12;
+            timePostFix = "PM"
+        }
+        else if (time == 0)
+        {
+            time = 12;
+            timePostFix = "AM"
+        }
+        else
+        {
+            timePostFix = "AM"
+        }
         
 
         hourlyContainer.innerHTML += 
         `
         <div class = "hour-info">
-            <h4>${time}:00</h4>
+            <h4>${time}:00${timePostFix}</h4>
             <h4>${temp}°C</h4>
         </div>
         `;
