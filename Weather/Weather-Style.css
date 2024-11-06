@@ -83,8 +83,98 @@ html
     display: flex;
     border: black 0.5rem solid;
     border-radius: 2rem;
-    height: 400px;
+    height: 600px;
     width: 400px;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding: 3rem;
+}
+
+/* Input */
+
+.input
+{
+    display: flex;
+    gap: 2rem;
+    width: 100%;
+}
+
+.input input
+{
+    height: 4rem;
+    width: 100%;
+    border: black 0.2rem solid;
+    border-radius: 10rem;
+    padding: 0 1rem;
+    font-size: 1.25rem;
+    text-align: center;
+}
+
+#search-btn
+{
+    box-sizing: border-box;
+    display: flex;
+    background: white;
+    height: 100%;
+    border: black 0.2rem solid;
+    border-radius: 15rem;
+    padding: 0.5rem;
     justify-content: center;
     align-items: center;
+    width: 6rem;
+    transition: all 200ms ease-in-out;
+}
+
+#search-btn:hover
+{
+    cursor: pointer;
+    background: black;
+}
+
+#search-btn:hover svg
+{
+    fill: white;
+}
+
+#search-btn svg
+{
+    height: 30px;
+    width: 30px;
+}
+
+/* Weather Info Display */
+
+#weather-info-primary
+{
+    text-align: center;
+}
+
+h2
+{
+    font-size: 6rem;
+}
+
+h3
+{
+    font-size: 2.5rem;
+}
+
+/* Weather Info */
+
+#weather-info-secondary
+{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.secondary-info
+{
+    text-align: center;
+}
+
+h4
+{
+    font-size: 1.2rem;
 }
