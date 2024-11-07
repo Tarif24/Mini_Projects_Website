@@ -8,23 +8,55 @@ searchBtn.addEventListener('click', GetLocationKey)
 
 function GetLocationKey()
 {
-    const city = document.getElementById("city-input").value;
+    let foundLocation = false;
+    let country = "";
+    let input = document.getElementById("city-input").value;
+    input = input.split(',');
+
+    if (input.length > 1)
+    {
+        country = input[1].replaceAll(' ', '');
+        country = country.toLowerCase();
+        country = country.charAt(0).toUpperCase() + country.slice(1); 
+    }
+
+    const city = input[0].replaceAll(' ', '');
     const queryRequest = `${locationKeyUrl}?apikey=${apiKey}&q=${city}`;
 
     if (city == "")
     {
-        alert("Please Enter A City");
-        return;
+         alert("Please Enter A City");
+         return;
     }
 
     fetch(queryRequest)
     .then((response) => response.json())
     .then((data) => 
+    {
+        if (country == "")
         {
-            GetLocationWeather(data[0]);
-            GetHourlyLocationWeather(data[0]);
+            country = data[0].Country.LocalizedName;
+        }
+
+        data.forEach((element, index) => 
+        {
+            if (country == element.Country.LocalizedName)
+            {
+                GetLocationWeather(data[index]);
+                GetHourlyLocationWeather(data[index]);
+                foundLocation = true
+            }
         })
-    .catch(error => 
+
+        if (!foundLocation)
+        {
+            alert("Please Enter A Valid City And Country");
+            document.getElementById("city-input").value = ""
+            return;
+        }
+        
+    })
+     .catch(error => 
     {
         alert("Please Enter A Valid City");
         document.getElementById("city-input").value = "";
