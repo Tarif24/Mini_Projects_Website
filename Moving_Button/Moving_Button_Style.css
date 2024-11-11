@@ -67,3 +67,63 @@ html
 {
     height: 80px;
 }
+
+/* Question */
+
+#main-container
+{
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+#question-app
+{
+    display: flex;
+    flex-direction: column;
+    height: 700px;
+    width: 1000px;
+    border: black 0.4rem solid;
+    border-radius: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn
+{
+    font-weight: 600;
+    transition: all 300ms ease;
+    padding: 1rem;
+    width: 8rem;
+    border-radius: 2rem;
+    background-color: white;
+    font-size: 1.25rem;
+    align-self: center;
+    margin-top: 1rem;
+}
+
+.btn:hover
+{
+    cursor: pointer;
+    background-color: black;
+    color: white;
+}
+
+#btn-container
+{
+    position: relative;
+    display: flex;
+    margin-top: 10rem;
+    gap: 2rem;
+}
+
+#no-btn
+{
+    /* position: absolute; */
+}
+
+h2
+{
+    font-size: 4rem;
+}
