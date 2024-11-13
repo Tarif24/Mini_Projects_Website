@@ -11,22 +11,25 @@ noBtn.addEventListener('mouseover', OnNoButtonHover);
 yesBtn.addEventListener('click', () => 
 {
     
-    if (noCtr == 0)
-    {
-        alert("ALR THEN HOP ON");
-    }
-    else if (noCtr <= 5)
-    {
-        alert("WHY DONT YOU WANNA PLAY WITH ME");
-    }
-    else if (noCtr <= 10)
-    {
-        alert("TOOK YOU LONG ENOUGH TO SAY YES");
-    }
-    else
-    {
-        alert("WHY DID IT TAKE SO LONG TO SAY YES");
-    } 
+    // if (noCtr == 0)
+    // {
+    //     alert("ALR THEN HOP ON");
+    // }
+    // else if (noCtr <= 5)
+    // {
+    //     alert("WHY DONT YOU WANNA PLAY WITH ME");
+    // }
+    // else if (noCtr <= 10)
+    // {
+    //     alert("TOOK YOU LONG ENOUGH TO SAY YES");
+    // }
+    // else
+    // {
+    //     alert("WHY DID IT TAKE SO LONG TO SAY YES");
+    // } 
+
+    alert(`You tried to press the no button ${noCtr} times before saying yes`);
+    location.reload();
 
 })
 
