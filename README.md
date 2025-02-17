@@ -4,7 +4,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/Tarif24/Mini_Projects_Website">
-    <img src="assets/logo.png" alt="Logo" width="240" height="240">
+    <img src="assets/logo.svg" alt="Logo" width="240" height="240">
   </a>
 
   <h3 align="center">Mini Projects</h3>
